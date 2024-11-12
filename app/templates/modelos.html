@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="container mt-4">
+        <div class="row">
+            {% for auto in autos %}
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen de la tarjeta -->
+                    <img src="{{ url_for('static', filename=auto[4]) }}" class="card-img-top" alt="{{ auto[1] }}">
+
+                    <!-- Contenido de la tarjeta -->
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">{{ auto[1] }}</h5> <!-- Título del auto -->
+                        <p class="card-text text-muted">{{ auto[3] }}</p> <!-- Descripción o detalles -->
+                        <h6 class="text-success fw-bold">Precio: ${{ auto[2] }}</h6> <!-- Precio del auto -->
+                    </div>
+
+                    <!-- Botones de acción -->
+                    <div class="card-footer d-flex justify-content-between bg-light">
+                        <a href="#" class="btn btn-outline-primary btn-sm">Ver más</a>
+                        <a href="#" class="btn btn-success btn-sm">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% endblock content %} 
+</body>
+</html>

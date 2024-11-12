@@ -1,0 +1,12 @@
+body{
+    
+    background-image: url('../static/imagenes/prueba1.jpg');
+    background-size: cover; /* La imagen cubrirá toda la pantalla */
+    background-position: center; /* Centramos la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* La altura será el 100% de la vista */
+    margin: 0;
+}
+.transparente {
+    opacity: 0.5; /* 50% de transparencia */
+}
