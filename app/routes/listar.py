@@ -1,10 +1,12 @@
 from flask import Blueprint, render_template,url_for
 from app.conecion_bd import obtener_conexion
+from .main import role_required
 listar_bp = Blueprint("listar", __name__)
 editar_bp = Blueprint("editar", __name__)
 
 
 @listar_bp.route("/listar")
+@role_required("admin")
 def listar():
     conexion = obtener_conexion()
     cursor = conexion.cursor()
