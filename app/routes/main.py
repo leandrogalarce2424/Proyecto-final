@@ -5,7 +5,7 @@ def role_required(required_role):
     def wrapper(f):
         @wraps(f)
         def decorated_function(*args, **kwargs):
-            if session.get("role") != required_role:
+            if session.get("rol") != required_role:
                 flash("No tienes permisos para esa acción.", "danger")
                 return redirect(
                     url_for("listar.listar")
@@ -21,7 +21,7 @@ main = Blueprint("main", __name__)
 @main.route("/")
 def index():
     logout()
-    return render_template("index.html")
+    return render_template("listar.html")
 
 @main.route("/registro")
 def registro():

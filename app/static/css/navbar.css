@@ -1,0 +1,190 @@
+
+/* Estilo del fondo */
+body {
+    background-image: url('../imagenes/prueba1.png'); /* Reemplaza con la URL o ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 100vh;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    background-color: black; /* Fondo negro para la barra de navegación */
+    
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: red !important; /* "Hypercar" en rojo */
+    display: flex;
+    align-items: center; /* Alinear logo y texto verticalmente */
+}
+
+.navbar-brand img {
+    height: 30px; /* Tamaño del logo */
+    margin-right: 10px; /* Espaciado entre el logo y el texto */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Color blanco inicial de los enlaces */
+}
+
+.navbar-nav .nav-link:hover {
+    color: gray !important; /* Color gris al pasar el cursor */
+}
+
+.navbar-nav .btn {
+    margin-left: 10px; /* Separación entre botones */
+}
+
+/* Botón especial para "Realizar Consulta" */
+.consulta-btn {
+    background-color: rgb(255, 115, 0);
+    color: black;
+    font-weight: bold;
+}
+
+.consulta-btn:hover {
+    background-color: gold; /* Efecto hover en amarillo más intenso */
+    color: black;
+}
+
+/* Estilo para las imágenes de los vehículos */
+.vehicle-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Para que las imágenes se ajusten en pantallas pequeñas */
+}
+
+.vehicle-container .vehicle {
+    position: relative;
+    width: 300px; /* Tamaño de las imágenes */
+    height: 500px; /* Ajustamos la altura para mayor espacio */
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Añadimos espacio entre las imágenes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido se distribuya correctamente */
+}
+
+.vehicle-container .vehicle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Efecto de zoom al pasar el cursor sobre las imágenes */
+.vehicle-container .vehicle:hover {
+    transform: scale(1.1); /* Más zoom al pasar el cursor */
+}
+
+.vehicle-name {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.vehicle-info {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px; /* Añadido margen superior */
+}
+
+.vehicle-btn {
+    padding: 8px 20px;
+    background-color: rgb(255, 115, 0);
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px auto 0; /* Centra el botón y le da margen superior */
+    width: 80%;
+}
+
+.vehicle-btn:hover {
+    background-color: gold;
+}
+
+/* Estilo para el formulario */
+.form-container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: rgb(255, 115, 0);
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-container button:hover {
+    background-color: gold;
+}
+
+.modal-body , .modal-title {
+    color :black
+}
+.vehicle-container {
+    display: flex;
+    gap: 20px;
+}
+
+.vehicle {
+    text-align: center;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 300px; /* Ajusta según tus necesidades */
+    height: 600px; /* Ajusta según tus necesidades */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+

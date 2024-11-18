@@ -1,12 +1,57 @@
-body{
-    
+html, body {
+    height: 100%; /* Asegura que html y body tengan 100% de la altura */
+    margin: 0; /* Elimina márgenes del navegador */
+    padding: 0; /* Elimina relleno */
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+body {
     background-image: url('../static/imagenes/prueba1.jpg');
     background-size: cover; /* La imagen cubrirá toda la pantalla */
     background-position: center; /* Centramos la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100vh; /* La altura será el 100% de la vista */
-    margin: 0;
+    min-height: 100vh; /* Asegura que el fondo ocupe al menos la altura de la vista */
+    font-family: Arial, sans-serif; /* Fuente para todo el cuerpo */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenido vertical y horizontalmente */
 }
+
 .transparente {
-    opacity: 0.5; /* 50% de transparencia */
+    background: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de transparencia */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo detrás */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra elegante */
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.transparente h2 {
+    margin-bottom: 20px;
+    color: #333; /* Texto en gris oscuro */
+}
+
+.transparente input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.transparente button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.transparente button:hover {
+    background-color: #0056b3;
 }
