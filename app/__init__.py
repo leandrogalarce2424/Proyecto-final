@@ -12,10 +12,12 @@ def create_app():
     from .routes.consultas import consulta_bp
     from .routes.pintura import pintura_bp
     from .routes.carrito import carrito_bp
+    from .routes.ruedas import ruedas_bp
     app.register_blueprint(main)
     app.register_blueprint(listar_bp)
     app.register_blueprint(editar_bp)
     app.register_blueprint(consulta_bp)
     app.register_blueprint(pintura_bp)
     app.register_blueprint(carrito_bp)
+    app.register_blueprint(ruedas_bp)
     return app

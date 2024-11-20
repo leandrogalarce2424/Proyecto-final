@@ -21,19 +21,18 @@
     </ul>
     {% endif %}
     {% endwith %}
-    <h1>pintura</h1>
+    <h1>Ruedas</h1>
     <div class="container mt-5">
         <div class="row">
-            {% for pintura in pinturas %}
+            {% for rueda in ruedas %}
             <div class="col-md-4">
                 <div class="card">
-                    <img src="{{ pintura['foto'] }}" class="card-img-top" alt="{{ pintura['nombre'] }}">
+                    <img src="{{ rueda['foto'] }}" class="card-img-top" alt="{{ rueda['nombre'] }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ pintura['nombre'] }}</h5>
-                        <p class="card-text">{{ pintura['detalle'] }}</p>
-                        <p class="card-text"><strong>Precio:</strong> ${{ pintura['precio'] }}</p>
-                        <a href="{{ url_for('carrito.add_to_cart', pintura_id= pintura['idpintura']) }}" class="btn btn-primary">Agregar al carrito</a>
-                        
+                        <h5 class="card-title">{{ rueda['nombre'] }}</h5>
+                        <p class="card-text">{{ rueda['detalle'] }}</p>
+                        <p class="card-text"><strong>Precio:</strong> ${{ rueda['precio'] }}</p>
+                        <a href="{{ url_for('carrito.add_to_cart', ruedas_id= rueda['idruedas']) }}" class="btn btn-primary">Agregar al carrito</a>
                     </div>
                 </div>
             </div>

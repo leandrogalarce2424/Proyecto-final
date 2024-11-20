@@ -5,18 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Login</title>
     <!-- Incluye el CSS de Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Estilo para colocar la imagen de fondo */
-        body {
-            background-image: url('static/imagenes/prueba1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            margin: 0;
-        }
-    </style>
+    
 </head>
 <body>
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -46,11 +37,52 @@
                 </form>
             </div>
             <div class="text-center mt-3">
-                <a href="#">¿Olvidaste tu contraseña?</a><br>
-                <a href="{{ url_for('main.registro') }}">¿No tienes una cuenta? Regístrate aquí</a>
+                <a href="#"></a><br>
+                <a href="{{ url_for('main.registro') }}"></a>
+                <!-- Botón para abrir el modal -->
+<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#registroModal">
+    Registrar Usuario
+  </button>
+  
             </div>
         </div>
     </div>
+    <!-- Modal -->
+<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registroModalLabel">Registrar Usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Formulario de Registro -->
+          <form method="POST" action="{{ url_for('main.add') }}">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+              <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+              <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
     
     <!-- Incluye el JavaScript de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

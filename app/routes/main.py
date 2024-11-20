@@ -21,7 +21,7 @@ main = Blueprint("main", __name__)
 @main.route("/")
 def index():
     logout()
-    return render_template("listar.html")
+    return render_template("index.html")
 
 @main.route("/registro")
 def registro():
@@ -97,11 +97,12 @@ def login():
             
 
             flash("Inicio de sesión exitoso.", "success")
-            return redirect(url_for("listar.listar"))
+            return render_template("listar.html", user=user)
+
         else:
             flash("Usuario o contraseña incorrectos.", "danger")
 
-    return render_template("login.html")
+    return render_template("index.html")
 
 @main.route("/logout")
 def logout():

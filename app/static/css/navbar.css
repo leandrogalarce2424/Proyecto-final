@@ -2,10 +2,11 @@
 /* Estilo del fondo */
 body {
     background-image: url('../imagenes/prueba1.png'); /* Reemplaza con la URL o ruta de tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-    height: 100vh;
+    background-repeat: no-repeat; /* Evitar que se repita */
+    background-size: cover; /* Escalar la imagen para cubrir toda la pantalla */
+    background-attachment: fixed; /* Fijar el fondo */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding: 0; /* Eliminar padding predeterminado */
     color: white;
 }
 
@@ -186,5 +187,79 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
+}
+
+/* Ajusta el tamaño de la imagen */
+.mission-image {
+    max-width: 100%;
+    margin-bottom: 10px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mission-text {
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.testimonial-text {
+    background-color: rgba(255, 111, 0, 0.955);  /* Fondo difuso */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: auto;
+}
+
+/* Estilo para el carrusel con efecto de difuminado */
+.carousel-item {
+    COLOR :black;
+    transition: opacity 1s ease-in-out; /* Efecto de transición suave */
+    opacity: 0;  /* Las imágenes están ocultas por defecto */
+}
+
+.carousel-item.active {
+    opacity: 1; /* La imagen activa es visible */
+}
+
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    transition: opacity 1s ease-in-out; /* Transición suave entre imágenes */
+}
+
+/* Opcional: si deseas que las imágenes mantengan una altura fija y se ajusten */
+.carousel-item img {
+    object-fit: cover; /* Mantiene el aspecto de la imagen al hacerla responsiva */
+    height: 400px; /* Ajusta la altura según lo necesites */
+}
+
+/* Estilo para las flechas sobre la imagen */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(100%);
+    font-size: 2rem;
+    color: rgb(248, 10, 10);
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
 }
 

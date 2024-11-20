@@ -9,7 +9,7 @@ body {
     background-image: url('../static/imagenes/prueba1.jpg');
     background-size: cover; /* La imagen cubrirá toda la pantalla */
     background-position: center; /* Centramos la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: repeat; /* Evita que la imagen se repita */
     min-height: 100vh; /* Asegura que el fondo ocupe al menos la altura de la vista */
     font-family: Arial, sans-serif; /* Fuente para todo el cuerpo */
     display: flex;

@@ -27,20 +27,29 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{ url_for('pintura.pintura') }}">Pintura</a></li>
-                        <li><a class="dropdown-item" href="#">Ruedas</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('ruedas.ruedas') }}">Ruedas</a></li>
                         <li><a class="dropdown-item" href="#">Neon</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-outline-light nav-link" href="{{ url_for('carrito.cart') }}">Carrito</a>
                 </li>
+                {% if session.get('rol') == 'admin' %}
+
                 <li class="nav-item">
                     <a class="btn btn-outline-light nav-link" href="{{ url_for('consulta.ver_consultas') }}">ver consultas</a>
                 </li>
+                {% endif %} 
                 <li class="nav-item">
                     <a class="btn btn-outline-light nav-link" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.569968345119!2d-58.63125102424198!3d-34.791599667444956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc5925425fb9b%3A0xb6680e29203b8739!2sCUDI%20-%20Centro%20Universitario%20de%20la%20Innovaci%C3%B3n!5e0!3m2!1ses!2sar!4v1731859542043!5m2!1ses!2sar" target="_blank">
                         Localización
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Usuario: {{ session['usuario'] }} - Rol: {{session['rol']}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.logout') }}">Cerrar Sesión</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn consulta-btn nav-link" href="{{ url_for('listar.consulta') }}">Realizar Consulta</a>

@@ -35,6 +35,117 @@
             </div>
         </div>
     </div>
+
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <!-- Imagen -->
+            <div class="col-md-6">
+                <img src="../static/imagenes/hyperbestia 3.png" alt="Vehículo Misión" class="mission-image">
+            </div>
+            <!-- Texto -->
+            <div class="col-md-6">
+                <div class="mission-text">
+                    <h2 class="mb-4">Hypercar mission</h2>
+                    <p>
+                        Hypercard se especializa en diseño personalizado, ofreciéndote la oportunidad de crear el auto de tus sueños. Nos encargamos de brindarte una experiencia única, adaptada a tus necesidades y estilo. ¡Tu vehículo ideal está a solo un paso!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <!-- Texto -->
+            <div class="col-md-6 order-md-2">
+                <div class="mission-text">
+                    <h2 class="mb-4">Innovación sin Límites</h2>
+                    <p>
+                        ----
+                </div>
+            </div>
+            <!-- Imagen -->
+            <div class="col-md-6 order-md-1">
+                <img src="../static/imagenes/hyper bestia 4 .png" alt="Vehículo Innovación" class="mission-image">
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <!-- Sección: Historias de Clientes -->
+        <h2 class="mb-4 text-center">Historias de Nuestros Clientes</h2>
+
+        <div id="clientStoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Historia 1 -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <!-- Imagen del Vehículo -->
+                        <div class="col-md-6">
+                            <img src="../static/imagenes/cliente1.jpg" alt="Cliente 1" class="d-block w-100 rounded">
+                        </div>
+                        <!-- Testimonio del Cliente -->
+                        <div class="col-md-6">
+                            <div class="testimonial-text">
+                                <h4>Tito Calderón</h4>
+                                <p>
+                                    "Mi experiencia con Hypercard fue increíble. El diseño del vehículo superó mis expectativas y el servicio fue excelente. ¡Ahora tengo el auto de mis sueños!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historia 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Imagen del Vehículo -->
+                        <div class="col-md-6">
+                            <img src="../static/imagenes/cliente2.jpg" alt="Cliente 2" class="d-block w-100 rounded">
+                        </div>
+                        <!-- Testimonio del Cliente -->
+                        <div class="col-md-6">
+                            <div class="testimonial-text">
+                                <h4>Leonel Messi</h4>
+                                <p>
+                                    "Nunca imaginé que podría tener un coche tan único. Gracias a Hypercard, mi vehículo es una extensión de mi personalidad. ¡No podría estar más feliz con el resultado!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historia 3 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Imagen del Vehículo -->
+                        <div class="col-md-6">
+                            <img src="../static/imagenes/cliente3.jpg" alt="Cliente 3" class="d-block w-100 rounded">
+                        </div>
+                        <!-- Testimonio del Cliente -->
+                        <div class="col-md-6">
+                            <div class="testimonial-text">
+                                <h4>Andrés Martínez</h4>
+                                <p>
+                                    "Hypercard hizo realidad mi sueño de tener un coche exclusivo. Cada detalle fue personalizado a mi gusto, y el proceso fue muy sencillo. ¡Gracias, Hypercard!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles del Carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#clientStoriesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#clientStoriesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    
+
+
     <script>
     document.querySelectorAll('.image-container').forEach(container => {
         const img = container.querySelector('img');
@@ -56,7 +167,7 @@
     </script>
 
     <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     {% endblock content %}
 </body>

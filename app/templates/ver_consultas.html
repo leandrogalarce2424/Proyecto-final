@@ -25,7 +25,21 @@
                         <p class="card-text"><strong>Correo:</strong> {{ consulta.email }}</p>
                         <p class="card-text"><strong>Ciudad:</strong> {{ consulta.ciudad }}</p>
                         <p class="card-text"><strong>Detalles:</strong> {{ consulta.detalle_consulta }}</p>
+                        <p class="card-text"><strong>Estado:</strong> {{ consulta.estado }}</p>
+
+                         <!-- Detalle de estado con un select para cambiar el estado -->
+                         <p class="card-text"><strong>Estado:</strong> 
+                            <form action="{{ url_for('consulta.actualizar_estado', id=consulta.idconsultas) }}" method="POST">
+                                <select name="estado" class="form-select" id="estado{{ consulta.idconsultas }}">
+                                    <option value="Pendiente" {% if consulta.estado == 'Pendiente' %}selected{% endif %}>Pendiente</option>
+                                    <option value="En curso" {% if consulta.estado == 'En curso' %}selected{% endif %}>En curso</option>
+                                    <option value="Concluida" {% if consulta.estado == 'Concluida' %}selected{% endif %}>Concluida</option>
+                                </select>
+                                <button type="submit" class="btn btn-warning mt-2">Actualizar Estado</button>
+                            </form>
+                        </p>
                     </div>
+        
                     <div class="card-footer text-center">
                         <!-- Botón para abrir el modal -->
                         <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal{{ consulta.idconsultas }}">
